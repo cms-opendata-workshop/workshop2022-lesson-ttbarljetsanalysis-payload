@@ -1,0 +1,104 @@
+{
+    "ttbar": {
+        "nominal": {
+            "files": [
+                {
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "nevts": 2343937
+                }
+            ],
+            "nevts_total": 2343937
+        },
+        "scaledown": {
+            "files": [
+                {
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "nevts": 2343937
+                }
+            ],
+            "nevts_total": 2343937
+        },
+        "scaleup": {
+            "files": [
+                {
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "nevts": 2343937
+                }
+            ],
+            "nevts_total": 2343937
+        },
+        "ME_var": {
+            "files": [
+                {
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "nevts": 2343937
+                }
+            ],
+            "nevts_total": 2343937
+        },
+        "PS_var": {
+            "files": [
+                {
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "nevts": 2343937
+                }
+            ],
+            "nevts_total": 2343937
+        }
+    },
+    "single_top_s_chan": {
+        "nominal": {
+            "files": [
+                {
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "nevts": 3490970
+                }
+            ],
+            "nevts_total": 2867199
+        }
+    },
+    "single_top_t_chan": {
+        "nominal": {
+            "files": [
+                {
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "nevts": 2343937
+                }
+            ],
+            "nevts_total": 2343937
+        }
+    },
+    "single_top_tW": {
+        "nominal": {
+            "files": [
+                {
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "nevts": 3490970
+                }
+            ],
+            "nevts_total": 2867199
+        }
+    },
+    "wjets": {
+        "nominal": {
+            "files": [
+                {
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "nevts": 3490970
+                }
+            ],
+            "nevts_total": 2867199
+        }
+    },
+    "data": {
+        "nominal": {
+            "files": [
+                {
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "nevts": 3490970
+                }
+            ],
+            "nevts_total": 2867199
+        }
+    }
+}
