@@ -3,7 +3,7 @@
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
                     "nevts": 2343937
                 }
             ],
@@ -12,7 +12,7 @@
         "scaledown": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat.root",
                     "nevts": 2343937
                 }
             ],
@@ -21,7 +21,7 @@
         "scaleup": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
                     "nevts": 2343937
                 }
             ],
@@ -30,7 +30,7 @@
         "ME_var": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat.root",
                     "nevts": 2343937
                 }
             ],
@@ -39,7 +39,7 @@
         "PS_var": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
                     "nevts": 2343937
                 }
             ],
@@ -50,7 +50,7 @@
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
                     "nevts": 3490970
                 }
             ],
@@ -61,7 +61,7 @@
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
                     "nevts": 2343937
                 }
             ],
@@ -72,7 +72,7 @@
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
                     "nevts": 3490970
                 }
             ],
@@ -83,7 +83,7 @@
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
                     "nevts": 3490970
                 }
             ],
@@ -94,7 +94,7 @@
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/od-workshop/ws2021/myoutput_odws2022-ttbaljets-prodv2.0_merged.root",
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
                     "nevts": 3490970
                 }
             ],

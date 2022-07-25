@@ -2,50 +2,60 @@
 import time
 #import logging
 
+# Vector is a Python 3.6+ library for 2D, 3D, and Lorentz vectors,
+# especially arrays of vectors, to solve common physics problems in a NumPy-like way.
+# https://vector.readthedocs.io/en/latest/
+# https://vector.readthedocs.io/en/latest/api/backends/vector.backends.awkward.html?highlight=register_awkward#module-vector.backends.awkward
 import vector; vector.register_awkward()
 
+#Awkward Array is a library for nested, variable-sized data,
+# including arbitrary-length lists, records, mixed types, and missing data, using NumPy-like idioms.
+#https://awkward-array.readthedocs.io/en/latest/
 import awkward as ak
+
 #do not import cabinetry yet.  Let's go step by step
 #import cabinetry
+
+# offea is a prototype package for pulling together all the typical needs
+# of a high-energy collider physics (HEP) experiment analysis
+# using the scientific python ecosystem.
+# Processors are coffea's way of encapsulating an analysis in a way that is deployment-neutral.
+# https://coffeateam.github.io/coffea/concepts.html#coffea-processor
 from coffea import processor
-#we are not going to use servicex
-#from coffea.processor import servicex
-from coffea.nanoevents import transforms
-from coffea.nanoevents.methods import base, vector
-from coffea.nanoevents.schemas.base import BaseSchema, zip_forms
-#we won't be importin using Service X, let's see how it works
-#from func_adl import ObjectStream
-import hist
-import json
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-import numpy as np
-import uproot
-#this utils is from the workshop itself.
-# It is [this package](https://github.com/iris-hep/analysis-grand-challenge/tree/main/analyses/cms-open-data-ttbar/utils)
-#import utils  # contains code for bookkeeping and cosmetics, as well as some boilerplate
+
+# Slimmed version of:
+# https://github.com/iris-hep/analysis-grand-challenge/tree/main/analyses/cms-open-data-ttbar/utils
+# These file contain code for bookkeeping and cosmetics, as well as some boilerplate
+from utils import *
+
+#When using coffea, we can benefit from the schema functionality to group columns into convenient objects.
+# We use this particular schema to try to accomodate our data into nice collections of physical objects
+# This schema is taken from mat-adamec/agc_coffea (https://github.com/mat-adamec/agc_coffea)
+from agc_schema import AGCSchema
 
 #let's use this later when we deal with cabinetry
 #logging.getLogger("cabinetry").setLevel(logging.INFO)
 
-### GLOBAL CONFIGURATION
+#### GLOBAL CONFIGURATION
 
-# input files per process, set to e.g. 10 (smaller number = faster)
+# input files per process per sample
+# note that you can have several input files as well
 N_FILES_MAX_PER_SAMPLE = 1
 
 # pipeline to use:
 # - "coffea" for pure coffea setup
 # - "servicex_processor" for coffea with ServiceX processor
 # - "servicex_databinder" for downloading query output and subsequent standalone coffea
+# During the CMS ODW we only use a processor arranging everything locally and running locally, we call this coffea
 PIPELINE = "coffea"
 
 #Python has grown to become the dominant language both in data analytics and general programming.
 # This growth has been fueled by computational libraries like NumPy, pandas, and scikit-learn.
-# However, these packages weren’t designed to scale beyond a single machine.
+# However, these packages weren't designed to scale beyond a single machine.
 # Dask was developed to natively scale these packages and the surrounding
 # ecosystem to multi-core machines and distributed clusters when datasets exceed memory.
 # enabled Dask (not supported yet with ServiceX processors in coffea)
-#USE_DASK = True
+# This is here just to indicate the possibility of using this infrastructure
 USE_DASK = False
 
 # ServiceX behavior: ignore cache with repeated queries
@@ -54,86 +64,6 @@ USE_DASK = False
 # analysis facility: set to "coffea_casa" for coffea-casa environments, "EAF" for FNAL, "local" for local setups
 #AF = "coffea_casa"
 AF = "local"
-
-############################from utils######################################
-def set_style():
-    mpl.style.use("ggplot")
-    plt.rcParams["axes.facecolor"] = "none"
-    plt.rcParams["axes.edgecolor"] = "222222"
-    plt.rcParams["axes.labelcolor"] = "222222"
-    plt.rcParams["xtick.color"] = "222222"
-    plt.rcParams["ytick.color"] = "222222"
-    plt.rcParams["font.size"] = 12
-    plt.rcParams['text.color'] = "222222"
-
-
-def construct_fileset(n_files_max_per_sample, use_xcache=False):
-    # using https://atlas-groupdata.web.cern.ch/atlas-groupdata/dev/AnalysisTop/TopDataPreparation/XSection-MC15-13TeV.data
-    # for reference
-    # x-secs are in pb
-    xsec_info = {
-        "ttbar": 396.87 + 332.97, # nonallhad + allhad, keep same x-sec for all
-        "single_top_s_chan": 2.0268 + 1.2676,
-        "single_top_t_chan": (36.993 + 22.175)/0.252,  # scale from lepton filter to inclusive
-        "single_top_tW": 37.936 + 37.906,
-        "wjets": 61457 * 0.252,  # e/mu+nu final states
-        "data": None
-    }
-
-    # list of files
-    with open("ntuples.json") as f:
-        file_info = json.load(f)
-
-    # process into "fileset" summarizing all info
-    fileset = {}
-    for process in file_info.keys():
-        if process == "data":
-            continue  # skip data
-
-        for variation in file_info[process].keys():
-            file_list = file_info[process][variation]["files"]
-            if n_files_max_per_sample != -1:
-                file_list = file_list[:n_files_max_per_sample]  # use partial set of samples
-
-            file_paths = [f["path"] for f in file_list]
-            if use_xcache:
-                file_paths = [f.replace("https://xrootd-local.unl.edu:1094", "root://red-xcache1.unl.edu") for f in file_paths]
-            nevts_total = sum([f["nevts"] for f in file_list])
-            metadata = {"process": process, "variation": variation, "nevts": nevts_total, "xsec": xsec_info[process]}
-            fileset.update({f"{process}__{variation}": {"files": file_paths, "metadata": metadata}})
-
-    return fileset
-
-
-def save_histograms(all_histograms, fileset, filename):
-    nominal_samples = [sample for sample in fileset.keys() if "nominal" in sample]
-
-    all_histograms += 1e-6  # add minimal event count to all bins to avoid crashes when processing a small number of samples
-
-    pseudo_data = (all_histograms[:, :, "ttbar", "ME_var"] + all_histograms[:, :, "ttbar", "PS_var"]) / 2  + all_histograms[:, :, "wjets", "nominal"]
-
-    with uproot.recreate(filename) as f:
-        for region in ["4j1b", "4j2b"]:
-            f[f"{region}_pseudodata"] = pseudo_data[120j::hist.rebin(2), region]
-            for sample in nominal_samples:
-                sample_name = sample.split("__")[0]
-                f[f"{region}_{sample_name}"] = all_histograms[120j::hist.rebin(2), region, sample_name, "nominal"]
-
-                # b-tagging variations
-                for i in range(4):
-                    for direction in ["up", "down"]:
-                        variation_name = f"btag_var_{i}_{direction}"
-                        f[f"{region}_{sample_name}_{variation_name}"] = all_histograms[120j::hist.rebin(2), region, sample_name, variation_name]
-
-                # jet energy scale variations
-                for variation_name in ["pt_scale_up", "pt_res_up"]:
-                    f[f"{region}_{sample_name}_{variation_name}"] = all_histograms[120j::hist.rebin(2), region, sample_name, variation_name]
-
-            f[f"{region}_ttbar_ME_var"] = all_histograms[120j::hist.rebin(2), region, "ttbar", "ME_var"]
-            f[f"{region}_ttbar_PS_var"] = all_histograms[120j::hist.rebin(2), region, "ttbar", "PS_var"]
-            for process in ["ttbar", "wjets"]:
-                f[f"{region}_{process}_scaledown"] = all_histograms[120j::hist.rebin(2), region, process, "scaledown"]
-                f[f"{region}_{process}_scaleup"] = all_histograms[120j::hist.rebin(2), region, process, "scaleup"]
 
 
 # Processors are coffea's way of encapsulating an analysis in a way that is deployment-neutral.
@@ -144,27 +74,40 @@ def save_histograms(all_histograms, fileset, filename):
 # about the actual analysis code and not about how to implement
 # efficient parallelization, assuming that the parallization is a
 # trivial map-reduce operation (e.g. filling histograms and adding them together)
+# The ProcessorABC class is an abstraction to encapsulate analysis code
+# so that it can be easily scaled out, leaving the delivery of input
+# columns and reduction of output accumulators to the coffea framework.
 processor_base = processor.ProcessorABC
 
+
 # functions creating systematic variations
+#-----------------------------
 def flat_variation(ones):
+#-----------------------------
     # 0.1% weight variations
     return (1.0 + np.array([0.001, -0.001], dtype=np.float32)) * ones[:, None]
 
+#-----------------------------------------
 def btag_weight_variation(i_jet, jet_pt):
+#-----------------------------------------
     # weight variation depending on i-th jet pT (10% as default value, multiplied by i-th jet pT / 50 GeV)
     return 1 + np.array([0.1, -0.1]) * (ak.singletons(jet_pt[:, i_jet]) / 50).to_numpy()
 
+#---------------------------
 def jet_pt_resolution(pt):
+#---------------------------
     # normal distribution with 5% variations, shape matches jets
     counts = ak.num(pt)
     pt_flat = ak.flatten(pt)
     resolution_variation = np.random.normal(np.ones_like(pt_flat), 0.05)
     return ak.unflatten(resolution_variation, counts)
 
-
+#------------------------------------
 class TtbarAnalysis(processor_base):
+#------------------------------------
+    #--------------------
     def __init__(self):
+    #--------------------
         num_bins = 25
         bin_low = 50
         bin_high = 550
@@ -180,8 +123,9 @@ class TtbarAnalysis(processor_base):
             .StrCat([], name="variation", label="Systematic variation", growth=True)
             .Weight()
         )
-
+    #-------------------------
     def process(self, events):
+    #-------------------------
         histogram = self.hist.copy()
 
         process = events.metadata["process"]  # "ttbar" etc.
@@ -191,7 +135,8 @@ class TtbarAnalysis(processor_base):
         x_sec = events.metadata["xsec"]
         nevts_total = events.metadata["nevts"]
         #lumi = 3378 # /pb
-        lumi = 2273.77 # /pb
+        #brilcalc lumi -c web -i Cert_13TeV_16Dec2015ReReco_Collisions15_25ns_JSON_v2.txt -u /pb --normtag normtag_PHYSICS_2015.json  --begin 256630 --end 260627 > lumi2015D.txt
+        lumi = 2256.38 # /pb
         if process != "data":
             xsec_weight = x_sec * lumi / nevts_total
         else:
@@ -309,53 +254,17 @@ class TtbarAnalysis(processor_base):
         output = {"nevents": {events.metadata["dataset"]: len(events)}, "hist": histogram}
 
         return output
-#https://coffeateam.github.io/coffea/api/coffea.processor.ProcessorABC.html?highlight=postprocess#coffea.processor.ProcessorABC.postprocess
+    # https://coffeateam.github.io/coffea/api/coffea.processor.ProcessorABC.html?highlight=postprocess#coffea.processor.ProcessorABC.postprocess
     def postprocess(self, accumulator):
         return accumulator
 
 
-#When using coffea, we can benefit from the schema functionality to group columns into convenient objects.
-# This schema is taken from mat-adamec/agc_coffea (https://github.com/mat-adamec/agc_coffea)
-class AGCSchema(BaseSchema):
-    def __init__(self, base_form):
-        super().__init__(base_form)
-        self._form["contents"] = self._build_collections(self._form["contents"])
-
-    def _build_collections(self, branch_forms):
-        names = set([k.split('_')[0] for k in branch_forms.keys() if not (k.startswith('number'))])
-        # Remove n(names) from consideration. It's safe to just remove names that start with n, as nothing else begins with n in our fields.
-        # Also remove GenPart, PV and MET because they deviate from the pattern of having a 'number' field.
-        names = [k for k in names if not (k.startswith('n') | k.startswith('met') | k.startswith('GenPart') | k.startswith('PV') | k.startswith('trig') | k.startswith('btag'))]
-        output = {}
-        for name in names:
-            offsets = transforms.counts2offsets_form(branch_forms['number' + name])
-            content = {k[len(name)+1:]: branch_forms[k] for k in branch_forms if (k.startswith(name + "_") & (k[len(name)+1:] != 'e'))}
-            # Add energy separately so its treated correctly by the p4 vector.
-            content['energy'] = branch_forms[name+'_e']
-            # Check for LorentzVector
-            output[name] = zip_forms(content, name, 'PtEtaPhiELorentzVector', offsets=offsets)
-
-        # Handle GenPart, PV, MET, trig and btag. Note that all the nPV_*'s should be the same. We just use one.
-        output['met'] = zip_forms({k[len('met')+1:]: branch_forms[k] for k in branch_forms if k.startswith('met_')}, 'met')
-        output['trig'] = zip_forms({k[len('trig')+1:]: branch_forms[k] for k in branch_forms if k.startswith('trig_')}, 'trig')
-        output['btag'] = zip_forms({k[len('btag')+1:]: branch_forms[k] for k in branch_forms if k.startswith('btag_')}, 'btag')
-        #output['GenPart'] = zip_forms({k[len('GenPart')+1:]: branch_forms[k] for k in branch_forms if k.startswith('GenPart_')}, 'GenPart', offsets=transforms.counts2offsets_form(branch_forms['numGenPart']))
-        output['PV'] = zip_forms({k[len('PV')+1:]: branch_forms[k] for k in branch_forms if (k.startswith('PV_') & ('npvs' not in k))}, 'PV', offsets=transforms.counts2offsets_form(branch_forms['nPV_x']))
-        return output
-
-    @property
-    def behavior(self):
-        behavior = {}
-        behavior.update(base.behavior)
-        behavior.update(vector.behavior)
-        return behavior
 
 
-#"Fileset" construction and metadata
-#Here, we gather all the required information about the files we want to process: paths to the files and asociated metadata.
-#fileset = utils.construct_fileset(N_FILES_MAX_PER_SAMPLE, use_xcache=False)
+# "Fileset" construction and metadata
+# Here, we gather all the required information about the files we want to process: paths to the files and asociated metadata
+# making use of the utils.py code in this repository
 fileset = construct_fileset(N_FILES_MAX_PER_SAMPLE, use_xcache=False)
-
 print(f"processes in fileset: {list(fileset.keys())}")
 print(f"\nexample of information in fileset:\n{{\n  'files': [{fileset['ttbar__nominal']['files'][0]}, ...],")
 print(f"  'metadata': {fileset['ttbar__nominal']['metadata']}\n}}")
