@@ -2,12 +2,6 @@
 import time
 #import logging
 
-# Vector is a Python 3.6+ library for 2D, 3D, and Lorentz vectors,
-# especially arrays of vectors, to solve common physics problems in a NumPy-like way.
-# https://vector.readthedocs.io/en/latest/
-# https://vector.readthedocs.io/en/latest/api/backends/vector.backends.awkward.html?highlight=register_awkward#module-vector.backends.awkward
-import vector; vector.register_awkward()
-
 #Awkward Array is a library for nested, variable-sized data,
 # including arbitrary-length lists, records, mixed types, and missing data, using NumPy-like idioms.
 #https://awkward-array.readthedocs.io/en/latest/

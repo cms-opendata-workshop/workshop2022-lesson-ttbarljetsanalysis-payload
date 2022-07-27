@@ -1,3 +1,10 @@
+
+# Vector is a Python 3.6+ library for 2D, 3D, and Lorentz vectors,
+# especially arrays of vectors, to solve common physics problems in a NumPy-like way.
+# https://vector.readthedocs.io/en/latest/
+# https://vector.readthedocs.io/en/latest/api/backends/vector.backends.awkward.html?highlight=register_awkward#module-vector.backends.awkward
+import vector; vector.register_awkward()
+
 # https://github.com/CoffeaTeam/coffea/blob/master/coffea/nanoevents/transforms.py
 from coffea.nanoevents import transforms
 
