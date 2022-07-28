@@ -20,13 +20,17 @@ from coffea.nanoevents.methods import base, vector
 #copare with zip: https://docs.python.org/3/library/functions.html#zip
 from coffea.nanoevents.schemas.base import BaseSchema, zip_forms
 
-
+#-----------------------------
 class AGCSchema(BaseSchema):
+#-----------------------------
+    #-----------------------------
     def __init__(self, base_form):
+    #-----------------------------
         super().__init__(base_form)
         self._form["contents"] = self._build_collections(self._form["contents"])
-
+    #------------------------------------------
     def _build_collections(self, branch_forms):
+    #------------------------------------------
         names = set([k.split('_')[0] for k in branch_forms.keys() if not (k.startswith('number'))])
         # Remove n(names) from consideration. It's safe to just remove names that start with n, as nothing else begins with n in our fields.
         # Also remove GenPart, PV and MET because they deviate from the pattern of having a 'number' field.
