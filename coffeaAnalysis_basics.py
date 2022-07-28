@@ -46,10 +46,10 @@ trijet_mass = trijet["p4"][ak.argmax(trijet.p4.pt, axis=1, keepdims=True)].mass
 observable = ak.flatten(trijet_mass)
 
 #fill in a histogram
-from utils import *
 histogram = hist.Hist.new.Reg(25, 50, 550, name="observable", label="observable [GeV]").StrCat(["4j1b", "4j2b"], name="region", label="Region").StrCat([], name="process", label="Process", growth=True).StrCat([], name="variation", label="Systematic variation", growth=True).Weight()    
 histogram.fill(observable=observable, region="4j2b", process="data", variation="nominal", weight=1)
 #plot
+from utils import *
 histogram[:,"4j2b","data","nominal"].plot(histtype="fill", linewidth=1, edgecolor="grey")
 plt.legend(frameon=False)
 plt.title(">= 4 jets, >= 2 b-tags")
