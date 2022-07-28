@@ -12,7 +12,7 @@
         "scaledown": {
             "files": [
                 {
-                    "path": "/playground/workshop2022/myoutput_ttbar_flat.root",
+                    "path": "/playground/workshop2022/myoutput_scaledown_flat.root",
                     "nevts": 39461147
                 }
             ],
@@ -21,7 +21,7 @@
         "scaleup": {
             "files": [
                 {
-                    "path": "/playground/workshop2022/myoutput_ttbar_flat.root",
+                    "path": "/playground/workshop2022/myoutput_scaleup_flat.root",
                     "nevts": 38472369
                 }
             ],
@@ -30,7 +30,7 @@
         "ME_var": {
             "files": [
                 {
-                    "path": "/playground/workshop2022/myoutput_ttbar_flat.root",
+                    "path": "/playground/workshop2022/myoutput_mevar_flat.root",
                     "nevts": 38475776
                 }
             ],
@@ -39,7 +39,7 @@
         "PS_var": {
             "files": [
                 {
-                    "path": "/playground/workshop2022/myoutput_ttbar_flat.root",
+                    "path": "/playground/workshop2022/myoutput_psvar_flat.root",
                     "nevts": 19383463
                 }
             ],
@@ -50,7 +50,7 @@
         "nominal": {
             "files": [
                 {
-                    "path": "/playground/workshop2022/myoutput_ttbar_flat.root",
+                    "path": "/playground/workshop2022/myoutput_singleatop_flat.root",
                     "nevts": 1630900
                 }
             ],
@@ -61,7 +61,7 @@
         "nominal": {
             "files": [
                 {
-                    "path": "/playground/workshop2022/myoutput_ttbar_flat.root",
+                    "path": "/playground/workshop2022/myoutput_singletop_flat.root",
                     "nevts": 19938230
                 }
             ],
@@ -72,11 +72,11 @@
         "nominal": {
             "files": [
                 {
-                    "path": "/playground/workshop2022/myoutput_ttbar_flat.root",
+                    "path": "/playground/workshop2022/myoutput_twatop_flat.root",
                     "nevts": 1000000 
                 },
                 {
-                    "path": "/playground/workshop2022/myoutput_ttbar_flat.root",
+                    "path": "/playground/workshop2022/myoutput_twtop_flat.root",
                     "nevts": 999400
                 }
             ],
@@ -88,7 +88,7 @@
         "nominal": {
             "files": [
                 {
-                    "path": "/playground/workshop2022/myoutput_ttbar_flat.root",
+                    "path": "/playground/workshop2022/myoutput_wjets_flat.root",
                     "nevts": 199037280
                 }
             ],
@@ -99,7 +99,7 @@
         "nominal": {
             "files": [
                 {
-                    "path": "/playground/workshop2022/myoutput_electron_flat.root",
+                    "path": "/playground/workshop2022/myoutput_selectron_flat.root",
                     "nevts": 134175832
                 },
                 {
