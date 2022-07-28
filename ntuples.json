@@ -3,102 +3,112 @@
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
-                    "nevts": 2343937
+                    "path": "/playground/workshop2022/myoutput_ttbar_flat.root",
+                    "nevts": 97994442
                 }
             ],
-            "nevts_total": 2343937
+            "nevts_total": 97994442
         },
         "scaledown": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat.root",
-                    "nevts": 2343937
+                    "path": "/playground/workshop2022/myoutput_scaledown_flat.root",
+                    "nevts": 39461147
                 }
             ],
-            "nevts_total": 2343937
+            "nevts_total": 39461147
         },
         "scaleup": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
-                    "nevts": 2343937
+                    "path": "/playground/workshop2022/myoutput_scaleup_flat.root",
+                    "nevts": 38472369
                 }
             ],
-            "nevts_total": 2343937
+            "nevts_total": 38472369
         },
         "ME_var": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat.root",
-                    "nevts": 2343937
+                    "path": "/playground/workshop2022/myoutput_mevar_flat.root",
+                    "nevts": 38475776
                 }
             ],
-            "nevts_total": 2343937
+            "nevts_total": 38475776
         },
         "PS_var": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
-                    "nevts": 2343937
+                    "path": "/playground/workshop2022/myoutput_psvar_flat.root",
+                    "nevts": 19383463
                 }
             ],
-            "nevts_total": 2343937
+            "nevts_total": 19383463
         }
     },
-    "single_top_s_chan": {
+    "single_atop_t_chan": {
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
-                    "nevts": 3490970
+                    "path": "/playground/workshop2022/myoutput_singleatop_flat.root",
+                    "nevts": 1630900
                 }
             ],
-            "nevts_total": 2867199
+            "nevts_total": 1630900
         }
     },
     "single_top_t_chan": {
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
-                    "nevts": 2343937
+                    "path": "/playground/workshop2022/myoutput_singletop_flat.root",
+                    "nevts": 19938230
                 }
             ],
-            "nevts_total": 2343937
+            "nevts_total": 19938230
         }
     },
     "single_top_tW": {
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
-                    "nevts": 3490970
+                    "path": "/playground/workshop2022/myoutput_twtop_flat.root",
+                    "nevts": 1000000 
+                },
+                {
+                    "path": "/playground/workshop2022/myoutput_twatop_flat.root",
+                    "nevts": 999400
                 }
             ],
-            "nevts_total": 2867199
+            "nevts_total": 1999400
+
         }
     },
     "wjets": {
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
-                    "nevts": 3490970
+                    "path": "/playground/workshop2022/myoutput_wjets_flat.root",
+                    "nevts": 199037280
                 }
             ],
-            "nevts_total": 2867199
+            "nevts_total": 199037280
         }
     },
     "data": {
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root",
-                    "nevts": 3490970
+                    "path": "/playground/workshop2022/myoutput_selectron_flat.root",
+                    "nevts": 134175832
+                },
+                {
+                    "path": "/playground/workshop2022/myoutput_smuon_flat.root",
+                    "nevts": 91999861
                 }
             ],
-            "nevts_total": 2867199
+            "nevts_total": 226175693
+
         }
     }
 }
