@@ -72,11 +72,11 @@
         "nominal": {
             "files": [
                 {
-                    "path": "/playground/workshop2022/myoutput_twatop_flat.root",
+                    "path": "/playground/workshop2022/myoutput_twtop_flat.root",
                     "nevts": 1000000 
                 },
                 {
-                    "path": "/playground/workshop2022/myoutput_twtop_flat.root",
+                    "path": "/playground/workshop2022/myoutput_twatop_flat.root",
                     "nevts": 999400
                 }
             ],
