@@ -4,46 +4,46 @@
             "files": [
                 {
                     "path": "/playground/workshop2022/myoutput_ttbar_flat.root",
-                    "nevts": 97994442
+                    "nevts": 9889
                 }
             ],
-            "nevts_total": 97994442
+            "nevts_total": 9889
         },
         "scaledown": {
             "files": [
                 {
                     "path": "/playground/workshop2022/myoutput_scaledown_flat.root",
-                    "nevts": 39461147
+                    "nevts": 10049
                 }
             ],
-            "nevts_total": 39461147
+            "nevts_total": 10049
         },
         "scaleup": {
             "files": [
                 {
                     "path": "/playground/workshop2022/myoutput_scaleup_flat.root",
-                    "nevts": 38472369
+                    "nevts": 10248
                 }
             ],
-            "nevts_total": 38472369
+            "nevts_total": 10248
         },
         "ME_var": {
             "files": [
                 {
                     "path": "/playground/workshop2022/myoutput_mevar_flat.root",
-                    "nevts": 38475776
+                    "nevts": 10187
                 }
             ],
-            "nevts_total": 38475776
+            "nevts_total": 10187
         },
         "PS_var": {
             "files": [
                 {
                     "path": "/playground/workshop2022/myoutput_psvar_flat.root",
-                    "nevts": 19383463
+                    "nevts": 10104
                 }
             ],
-            "nevts_total": 19383463
+            "nevts_total": 10104
         }
     },
     "single_atop_t_chan": {
@@ -51,10 +51,10 @@
             "files": [
                 {
                     "path": "/playground/workshop2022/myoutput_singleatop_flat.root",
-                    "nevts": 1630900
+                    "nevts": 526114
                 }
             ],
-            "nevts_total": 1630900
+            "nevts_total": 526114
         }
     },
     "single_top_t_chan": {
@@ -62,10 +62,10 @@
             "files": [
                 {
                     "path": "/playground/workshop2022/myoutput_singletop_flat.root",
-                    "nevts": 19938230
+                    "nevts": 14571
                 }
             ],
-            "nevts_total": 19938230
+            "nevts_total": 14571
         }
     },
     "single_top_tW": {
@@ -73,14 +73,14 @@
             "files": [
                 {
                     "path": "/playground/workshop2022/myoutput_twtop_flat.root",
-                    "nevts": 1000000 
+                    "nevts": 9719 
                 },
                 {
                     "path": "/playground/workshop2022/myoutput_twatop_flat.root",
-                    "nevts": 999400
+                    "nevts": 8755
                 }
             ],
-            "nevts_total": 1999400
+            "nevts_total": 18474
 
         }
     },
@@ -89,10 +89,10 @@
             "files": [
                 {
                     "path": "/playground/workshop2022/myoutput_wjets_flat.root",
-                    "nevts": 199037280
+                    "nevts": 388674
                 }
             ],
-            "nevts_total": 199037280
+            "nevts_total": 388674
         }
     },
     "data": {
@@ -100,14 +100,14 @@
             "files": [
                 {
                     "path": "/playground/workshop2022/myoutput_selectron_flat.root",
-                    "nevts": 134175832
+                    "nevts": 6721
                 },
                 {
                     "path": "/playground/workshop2022/myoutput_smuon_flat.root",
-                    "nevts": 91999861
+                    "nevts": 15090
                 }
             ],
-            "nevts_total": 226175693
+            "nevts_total": 21811
 
         }
     }

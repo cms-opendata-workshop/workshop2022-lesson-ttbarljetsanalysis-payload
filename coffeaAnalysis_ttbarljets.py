@@ -34,10 +34,18 @@ from agc_schema import AGCSchema
 
 # input files per process per sample
 # note that you can have several input files as well
-N_FILES_MAX_PER_SAMPLE = 1
+# -1  means running over all datasets
+N_FILES_MAX_PER_SAMPLE = -1
+
+# number of total data events used (electron and muon)
+# for testing with limited datasets and scale down luminosity
+# -1 will not scale lumi (run it with -1 if using the whole dataset)
+EVENTS_DATA = 30180
 
 # pipeline to use:
 # - "coffea" for pure coffea setup
+# Refer to https://github.com/iris-hep/analysis-grand-challenge/blob/main/analyses/cms-open-data-ttbar/coffea.ipynb
+# for the usage of other executors (we have stripped off those lines)
 # - "servicex_processor" for coffea with ServiceX processor
 # - "servicex_databinder" for downloading query output and subsequent standalone coffea
 # During the CMS ODW we only use a processor arranging everything locally and running locally, we call this coffea
@@ -55,6 +63,8 @@ USE_DASK = False
 # ServiceX behavior: ignore cache with repeated queries
 #SERVICEX_IGNORE_CACHE = True
 
+# Refer to https://github.com/iris-hep/analysis-grand-challenge/blob/main/analyses/cms-open-data-ttbar/coffea.ipynb
+# for more on the subject
 # analysis facility: set to "coffea_casa" for coffea-casa environments, "EAF" for FNAL, "local" for local setups
 #AF = "coffea_casa"
 AF = "local"
@@ -123,14 +133,19 @@ class TtbarAnalysis(processor_base):
         histogram = self.hist.copy()
 
         process = events.metadata["process"]  # "ttbar" etc.
-        variation = events.metadata["variation"]  # "nominal" etc.
+        variation = events.metadata["variation"]  # "nominal", "scaledown", etc.
+
+        #print(f'Currently doing variation {variation} for {process}')
 
         # normalization for MC
         x_sec = events.metadata["xsec"]
         nevts_total = events.metadata["nevts"]
-        #lumi = 3378 # /pb
-        #brilcalc lumi -c web -i Cert_13TeV_16Dec2015ReReco_Collisions15_25ns_JSON_v2.txt -u /pb --normtag normtag_PHYSICS_2015.json  --begin 256630 --end 260627 > lumi2015D.txt
-        lumi = 2256.38 # /pb
+        # This truelumi number was obtained with
+        # brilcalc lumi -c web -i Cert_13TeV_16Dec2015ReReco_Collisions15_25ns_JSON_v2.txt -u /pb --normtag normtag_PHYSICS_2015.json  --begin 256630 --end 260627 > lumi2015D.txt
+        # lumi in units of /pb
+        #total number of events in singleelectron + singlemuon is 226175693
+        truelumi = 2256.38
+        lumi = truelumi*(EVENTS_DATA/226175693) if (EVENTS_DATA != -1) else truelumi
         if process != "data":
             xsec_weight = x_sec * lumi / nevts_total
         else:
@@ -138,36 +153,44 @@ class TtbarAnalysis(processor_base):
 
         #### systematics
         # example of a simple flat weight variation, using the coffea nanoevents systematics feature
+        # https://github.com/CoffeaTeam/coffea/blob/20a7e749eea3b8de4880088d2f0e43f6ef9d7993/coffea/nanoevents/methods/base.py#L84
+        # Help on method add_systematic in module coffea.nanoevents.methods.base:
+        # add_systematic(name: str, kind: str, what: Union[str, List[str], Tuple[str]], varying_function: Callable)
+        # method of coffea.nanoevents.methods.base.NanoEventsArray instance
         if process == "wjets":
             events.add_systematic("scale_var", "UpDownSystematic", "weight", flat_variation)
 
-        # jet energy scale / resolution systematics
+        # example on how to get jet energy scale / resolution systematics
         # need to adjust schema to instead use coffea add_systematic feature, especially for ServiceX
         # cannot attach pT variations to events.jet, so attach to events directly
         # and subsequently scale pT by these scale factors
         events["pt_nominal"] = 1.0
-        events["pt_scale_up"] = 1.03
-        events["pt_res_up"] = jet_pt_resolution(events.jet.pt)
+        #events["pt_scale_up"] = 1.03
+        # we have already these corrections in our data for this workshop, so we might as well use them
+        # to assign a variation per jet and not per event. However, to avoid messing too much with this code, 
+        # try a silly thing just for fun: take the average of jet variations per event (fill out the None values with a default 1.03)
+        events['pt_scale_up'] = ak.fill_none(ak.mean(events.jet.corrptUp/events.jet.corrpt,axis=1),1.03)
+        events["pt_res_up"] = jet_pt_resolution(events.jet.corrpt)
 
         pt_variations = ["pt_nominal", "pt_scale_up", "pt_res_up"] if variation == "nominal" else ["pt_nominal"]
         for pt_var in pt_variations:
 
             ### event selection
-            # very very loosely based on https://arxiv.org/abs/2006.13076
+            # based on https://link.springer.com/article/10.1007/JHEP09(2017)051
 
-            # pT > 25 GeV for leptons & jets
-            selected_electrons = events.electron[events.electron.pt > 25]
-            selected_muons = events.muon[events.muon.pt > 25]
-            jet_filter = events.jet.pt * events[pt_var] > 25  # pT > 25 GeV for jets (scaled by systematic variations)
+            #object filters
+            selected_electrons = events.electron[(events.electron.pt > 30) & (abs(events.electron.eta)<2.1) & (events.electron.isTight == True) & (events.electron.sip3d < 4)]
+            selected_muons = events.muon[(events.muon.pt > 30) & (abs(events.muon.eta)<2.1) & (events.muon.isTight == True) & (events.muon.sip3d < 4) & (events.muon.pfreliso04DBCorr < 0.15)]
+            jet_filter = (events.jet.corrpt * events[pt_var] > 30) & (abs(events.jet.eta)<2.4)
             selected_jets = events.jet[jet_filter]
 
             # single lepton requirement
             event_filters = (ak.count(selected_electrons.pt, axis=1) & ak.count(selected_muons.pt, axis=1) == 1)
             # at least four jets
             pt_var_modifier = events[pt_var] if "res" not in pt_var else events[pt_var][jet_filter]
-            event_filters = event_filters & (ak.count(selected_jets.pt * pt_var_modifier, axis=1) >= 4)
+            event_filters = event_filters & (ak.count(selected_jets.corrpt * pt_var_modifier, axis=1) >= 4)
             # at least one b-tagged jet ("tag" means score above threshold)
-            B_TAG_THRESHOLD = 0.5
+            B_TAG_THRESHOLD = 0.8
             event_filters = event_filters & (ak.sum(selected_jets.btag >= B_TAG_THRESHOLD, axis=1) >= 1)
 
             # apply event filters
@@ -183,21 +206,11 @@ class TtbarAnalysis(processor_base):
                     selected_jets_region = selected_jets[region_filter]
                     # use HT (scalar sum of jet pT) as observable
                     pt_var_modifier = events[event_filters][region_filter][pt_var] if "res" not in pt_var else events[pt_var][jet_filter][event_filters][region_filter]
-                    observable = ak.sum(selected_jets_region.pt * pt_var_modifier, axis=-1)
+                    observable = ak.sum(selected_jets_region.corrpt * pt_var_modifier, axis=-1)
 
                 elif region == "4j2b":
                     region_filter = ak.sum(selected_jets.btag > B_TAG_THRESHOLD, axis=1) >= 2
                     selected_jets_region = selected_jets[region_filter]
-
-                    if PIPELINE == "servicex_processor":
-                        # wrap into a four-vector object to allow addition
-                        selected_jets_region = ak.zip(
-                            {
-                                "pt": selected_jets_region.pt, "eta": selected_jets_region.eta, "phi": selected_jets_region.phi,
-                                "mass": selected_jets_region.mass, "btag": selected_jets_region.btag,
-                            },
-                            with_name="Momentum4D",
-                        )
 
                     # reconstruct hadronic top as bjj system with largest pT
                     # the jet energy scale / resolution effect is not propagated to this observable at the moment
@@ -216,8 +229,10 @@ class TtbarAnalysis(processor_base):
                             observable=observable, region=region, process=process, variation=variation, weight=xsec_weight
                         )
 
+
                     if variation == "nominal":
                         # also fill weight-based variations for all nominal samples
+                        # this corresponds to the case for wjets included above as an example
                         for weight_name in events.systematics.fields:
                             for direction in ["up", "down"]:
                                 # extract the weight variations and apply all event & region filters
@@ -232,7 +247,7 @@ class TtbarAnalysis(processor_base):
                             for i_dir, direction in enumerate(["up", "down"]):
                                 # create systematic variations that depend on object properties (here: jet pT)
                                 if len(observable):
-                                    weight_variation = btag_weight_variation(i_var, selected_jets_region.pt)[:, 1-i_dir]
+                                    weight_variation = btag_weight_variation(i_var, selected_jets_region.corrpt)[:, 1-i_dir]
                                 else:
                                     weight_variation = 1 # no events selected
                                 histogram.fill(
@@ -244,7 +259,6 @@ class TtbarAnalysis(processor_base):
                     histogram.fill(
                             observable=observable, region=region, process=process, variation=pt_var, weight=xsec_weight
                         )
-
         output = {"nevents": {events.metadata["dataset"]: len(events)}, "hist": histogram}
 
         return output
@@ -262,33 +276,36 @@ fileset = construct_fileset(N_FILES_MAX_PER_SAMPLE, use_xcache=False)
 print(f"processes in fileset: {list(fileset.keys())}")
 print(f"\nexample of information in fileset:\n{{\n  'files': [{fileset['ttbar__nominal']['files'][0]}, ...],")
 print(f"  'metadata': {fileset['ttbar__nominal']['metadata']}\n}}")
+t0 = time.time()
+
 
 
 #Execute the data delivery pipeline
-#What happens here depends on the configuration setting for PIPELINE:
-#when set to servicex_processor, ServiceX will feed columns to coffea
-# processors, which will asynchronously process them and accumulate the output histograms,
-#when set to coffea, processing will happen with pure coffea,
-#if PIPELINE was set to servicex_databinder, the input data has already been pre-processed
-# and will be processed further with coffea.
-t0 = time.time()
-#we don't have an external executor so we removed those lines
+#we don't have an external executor, so we use local coffea (IterativeExecutor())
 if PIPELINE == "coffea":
     executor = processor.IterativeExecutor()
-
     from coffea.nanoevents.schemas.schema import auto_schema
     schema = AGCSchema if PIPELINE == "coffea" else auto_schema
     run = processor.Runner(executor=executor, schema=schema, savemetrics=True, metadata_cache={})
-
+    #print(fileset)
     all_histograms, metrics = run(fileset, "events", processor_instance=TtbarAnalysis())
     all_histograms = all_histograms["hist"]
 
+
 print(f"\nexecution took {time.time() - t0:.2f} seconds")
 
-#Inspecting the produced histograms
+#utils.save_histograms(all_histograms, fileset, "histograms.root")
+save_histograms(all_histograms, fileset, "histograms.root")
+
+#################################
+#The below are just examples to show, mainly, when working interactively.
+#They can be commented out
+#################################
+#Inspecting the produced histograms (if run interactively or in a notebook)
 #Let's have a look at the data we obtained. We built histograms in two phase space regions, for multiple physics processes and systematic variations.
 #utils.set_style()
 set_style()
+#We can slice and dice. Plain numbers refer to bins. Use a “j” suffix to refer to data coordinates
 all_histograms[120j::hist.rebin(2), "4j1b", :, "nominal"].stack("process")[::-1].plot(stack=True, histtype="fill", linewidth=1, edgecolor="grey")
 plt.legend(frameon=False)
 plt.title(">= 4 jets, 1 b-tag")
@@ -330,6 +347,5 @@ plt.xlabel("$m_{bjj}$ [Gev]")
 plt.title("Jet energy variations");
 plt.savefig('jet_energy_variations.png')
 
-#utils.save_histograms(all_histograms, fileset, "histograms.root")
-save_histograms(all_histograms, fileset, "histograms.root")
+
 
