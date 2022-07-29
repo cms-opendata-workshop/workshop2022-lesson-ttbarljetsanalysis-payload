@@ -58,6 +58,7 @@ ntuples = {
     "single_atop_t_chan": {},
     "single_top_t_chan": {},
     "single_top_tW": {},
+    "single_atop_tW": {},
     "wjets": {}
 }
 
@@ -132,6 +133,7 @@ update_dict("ttbar", "ME_var", ["RunIIFall15MiniAODv2_TTJets_TuneCUETP8M1_13TeV-
 update_dict("single_top_t_chan", "nominal", ["RunIIFall15MiniAODv2_ST_t-channel_4f_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_flat"])
 update_dict("single_atop_t_chan", "nominal", ["RunIIFall15MiniAODv2_ST_t-channel_antitop_4f_leptonDecays_13TeV-powheg-pythia8_TuneCUETP8M1_flat"])
 update_dict("single_top_tW", "nominal", ["RunIIFall15MiniAODv2_ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_flat"])
+update_dict("single_atop_tW", "nominal", ["RunIIFall15MiniAODv2_ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_flat"])
 update_dict("wjets", "nominal", ["RunIIFall15MiniAODv2_WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_flat"])
 
 
@@ -150,10 +152,4 @@ json.dump(
 print(
     f"Output written to {output_file_name}"
 )
-
-
-# In[ ]:
-
-
-
 
