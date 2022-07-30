@@ -1601,20 +1601,13 @@
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_flat/D4B6F1FF-FC96-4D8C-BCBE-51C2C038DA53_flat.root",
                     "nevts": 225039
-                }
-            ],
-            "nevts_total": 225039
-        }
-    },
-    "single_atop_tW": {
-        "nominal": {
-            "files": [
+                },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_flat/5CF71E92-2C15-4476-9CFB-FDA53F431351_flat.root",
                     "nevts": 225319
                 }
             ],
-            "nevts_total": 225319
+            "nevts_total": 450358
         }
     },
     "wjets": {

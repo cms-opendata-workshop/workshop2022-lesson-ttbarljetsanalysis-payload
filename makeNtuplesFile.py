@@ -58,7 +58,6 @@ ntuples = {
     "single_atop_t_chan": {},
     "single_top_t_chan": {},
     "single_top_tW": {},
-    "single_atop_tW": {},
     "wjets": {}
 }
 
@@ -124,16 +123,36 @@ def update_dict(process, variation, process_dir):
 # In[ ]:
 
 
-update_dict("data", "nominal", ["Run2015D_SingleMuon_flat", "Run2015D_SingleElectron_flat"])
+update_dict(
+    "data", "nominal", 
+    [
+        "Run2015D_SingleMuon_flat", 
+        "Run2015D_SingleElectron_flat"
+    ]
+)
+
 update_dict("ttbar", "nominal", ["RunIIFall15MiniAODv2_TT_TuneCUETP8M1_13TeV-powheg-pythia8_flat"])
+
 update_dict("ttbar", "scaledown", ["RunIIFall15MiniAODv2_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_flat"])
+
 update_dict("ttbar", "scaleup", ["RunIIFall15MiniAODv2_TT_TuneCUETP8M1_13TeV-powheg-scaleup-pythia8_flat"])
+
 update_dict("ttbar", "PS_var", ["RunIIFall15MiniAODv2_TT_TuneEE5C_13TeV-powheg-herwigpp_flat"])
+
 update_dict("ttbar", "ME_var", ["RunIIFall15MiniAODv2_TTJets_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_flat"])
+
 update_dict("single_top_t_chan", "nominal", ["RunIIFall15MiniAODv2_ST_t-channel_4f_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_flat"])
+
 update_dict("single_atop_t_chan", "nominal", ["RunIIFall15MiniAODv2_ST_t-channel_antitop_4f_leptonDecays_13TeV-powheg-pythia8_TuneCUETP8M1_flat"])
-update_dict("single_top_tW", "nominal", ["RunIIFall15MiniAODv2_ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_flat"])
-update_dict("single_atop_tW", "nominal", ["RunIIFall15MiniAODv2_ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_flat"])
+
+update_dict(
+    "single_top_tW", "nominal", 
+    [
+        "RunIIFall15MiniAODv2_ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_flat", 
+        "RunIIFall15MiniAODv2_ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_flat"
+    ]
+)
+
 update_dict("wjets", "nominal", ["RunIIFall15MiniAODv2_WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_flat"])
 
 
@@ -152,4 +171,10 @@ json.dump(
 print(
     f"Output written to {output_file_name}"
 )
+
+
+# In[ ]:
+
+
+
 
