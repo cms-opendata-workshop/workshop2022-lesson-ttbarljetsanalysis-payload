@@ -16,6 +16,7 @@ EOS is installed (lxplus or SWAN will work)
 import json
 import os
 import uproot
+import yaml
 
 from subprocess import (
     PIPE,
@@ -47,6 +48,39 @@ data_dirs = [d for d in contents if '_flat' in d and '.root' not in d]
 # These dirs contain the metadata which we can query as a check (re: number of events)
 # We will query the root files directly later to determine number of events
 metadata_dirs = [d for d in contents if not '_flat' in d and '.root' not in d]
+
+
+# In[ ]:
+
+
+# See what's in the metadata yaml files
+metadata = run(
+    f"xrdfs {eos_env} cat {poet_path}/RunIIFall15MiniAODv2_WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/metadata.yaml",
+    stdout=PIPE,
+    stderr=PIPE,
+    universal_newlines=True,
+    shell=True
+)
+
+md = yaml.safe_load(
+    metadata.stdout
+)
+
+
+# In[ ]:
+
+
+# How to get the number of events in the miniAOD?
+
+with uproot.open(
+                'root://eospublic.cern.ch//eos/opendata/cms/mc/RunIIFall15MiniAODv2/WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/MINIAODSIM/PU25nsData2015v1_76X_mcRun2_asymptotic_v12_ext4-v1/40000/2C8FC19B-01EA-E511-BE10-BC305B390AB4.root'
+) as f:
+    print(
+        f.keys()
+    )
+    print(
+        f'{f["Events"].num_entries} events'
+    )
 
 
 # In[ ]:
