@@ -185,7 +185,7 @@ class TtbarAnalysis(processor_base):
             selected_jets = events.jet[jet_filter]
 
             # single lepton requirement
-            event_filters = (ak.count(selected_electrons.pt, axis=1) & ak.count(selected_muons.pt, axis=1) == 1)
+            event_filters = ((ak.count(selected_electrons.pt, axis=1) + ak.count(selected_muons.pt, axis=1)) == 1)
             # at least four jets
             pt_var_modifier = events[pt_var] if "res" not in pt_var else events[pt_var][jet_filter]
             event_filters = event_filters & (ak.count(selected_jets.corrpt * pt_var_modifier, axis=1) >= 4)
@@ -247,7 +247,7 @@ class TtbarAnalysis(processor_base):
                             for i_dir, direction in enumerate(["up", "down"]):
                                 # create systematic variations that depend on object properties (here: jet pT)
                                 if len(observable):
-                                    weight_variation = btag_weight_variation(i_var, selected_jets_region.corrpt)[:, 1-i_dir]
+                                    weight_variation = btag_weight_variation(i_var, selected_jets_region.corrpt)[:, i_dir]
                                 else:
                                     weight_variation = 1 # no events selected
                                 histogram.fill(
