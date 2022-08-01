@@ -40,7 +40,7 @@ N_FILES_MAX_PER_SAMPLE = -1
 # number of total data events used (electron and muon)
 # for testing with limited datasets and scale down luminosity
 # -1 will not scale lumi (run it with -1 if using the whole dataset)
-EVENTS_DATA = 30180
+EVENTS_DATA = -1
 
 # pipeline to use:
 # - "coffea" for pure coffea setup
@@ -296,6 +296,8 @@ print(f"\nexecution took {time.time() - t0:.2f} seconds")
 
 #utils.save_histograms(all_histograms, fileset, "histograms.root")
 save_histograms(all_histograms, fileset, "histograms.root")
+
+#quit()
 
 #################################
 #The below are just examples to show, mainly, when working interactively.

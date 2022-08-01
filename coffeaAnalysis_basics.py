@@ -3,9 +3,14 @@ import numpy as np
 import awkward as ak
 import hist
 import matplotlib.pyplot as plt
+import mplhep as hep
 from coffea.nanoevents import NanoEventsFactory, BaseSchema
 from agc_schema import AGCSchema
+ 
 events = NanoEventsFactory.from_root('root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_TT_TuneCUETP8M1_13TeV-powheg-pythia8_flat/6D5A8366-FEA3-4C76-BD4E-22B56D367281_flat.root', schemaclass=AGCSchema, treepath='events').events()
+#events = NanoEventsFactory.from_root('root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_TT_TuneCUETP8M1_13TeV-powheg-pythia8_flat.root', schemaclass=AGCSchema, treepath='events').events()
+#events = NanoEventsFactory.from_root('root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat.root', schemaclass=AGCSchema, treepath='events').events()
+#events = NanoEventsFactory.from_root('root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat.root', schemaclass=AGCSchema, treepath='events').events()
 
 selected_electrons = events.electron[(events.electron.pt > 30) & (abs(events.electron.eta)<2.1) & (events.electron.isTight == True) & (events.electron.sip3d < 4)]
 selected_muons = events.muon[(events.muon.pt > 30) & (abs(events.muon.eta)<2.1) & (events.muon.isTight == True) & (events.muon.sip3d < 4) & (events.muon.pfreliso04DBCorr < 0.15)]

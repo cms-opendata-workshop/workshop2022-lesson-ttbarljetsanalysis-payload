@@ -7,6 +7,7 @@ import json
 # https://matplotlib.org/stable/index.html
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+import mplhep as hep
 
 #https://numpy.org/doc/stable/
 import numpy as np
