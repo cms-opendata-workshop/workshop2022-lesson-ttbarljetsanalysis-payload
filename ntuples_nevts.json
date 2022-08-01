@@ -1,0 +1,44 @@
+{
+    "data": {
+        "nominal": {
+            "number_events": 226175693
+        }
+    },
+    "ttbar": {
+        "nominal": {
+            "number_events": 97994442
+        },
+        "scaledown": {
+            "number_events": 39461147
+        },
+        "scaleup": {
+            "number_events": 38472369
+        },
+        "PS_var": {
+            "number_events": 19383463
+        },
+        "ME_var": {
+            "number_events": 38475776
+        }
+    },
+    "single_atop_t_chan": {
+        "nominal": {
+            "number_events": 1630900
+        }
+    },
+    "single_top_t_chan": {
+        "nominal": {
+            "number_events": 19938230
+        }
+    },
+    "single_top_tW": {
+        "nominal": {
+            "number_events": 1999400
+        }
+    },
+    "wjets": {
+        "nominal": {
+            "number_events": 199037280
+        }
+    }
+}

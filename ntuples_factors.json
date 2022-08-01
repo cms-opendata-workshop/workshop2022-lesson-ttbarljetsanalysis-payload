@@ -1,0 +1,44 @@
+{
+    "data": {
+        "nominal": {
+            "factor": 0.16971120322819128
+        }
+    },
+    "ttbar": {
+        "nominal": {
+            "factor": 0.21042392383845607
+        },
+        "scaledown": {
+            "factor": 0.2072943039390112
+        },
+        "scaleup": {
+            "factor": 0.21257287275446957
+        },
+        "PS_var": {
+            "factor": 0.21235250894022395
+        },
+        "ME_var": {
+            "factor": 0.21380712373416458
+        }
+    },
+    "single_atop_t_chan": {
+        "nominal": {
+            "factor": 0.3225912073088479
+        }
+    },
+    "single_top_t_chan": {
+        "nominal": {
+            "factor": 0.3022070665249623
+        }
+    },
+    "single_top_tW": {
+        "nominal": {
+            "factor": 0.22524657397219167
+        }
+    },
+    "wjets": {
+        "nominal": {
+            "factor": 0.19392345996689667
+        }
+    }
+}
