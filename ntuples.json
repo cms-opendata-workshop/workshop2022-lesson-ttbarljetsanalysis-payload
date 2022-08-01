@@ -15,16 +15,8 @@
                     "nevts": 450899
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/0DFE309E-1D28-4615-A307-D93945D00778_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/1130E0AD-1ED1-4B31-AC3E-DC61B5D79552_flat.root",
                     "nevts": 431057
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/1264572A-1880-4AB7-8FD3-6508702F7FF9_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/12FBD489-A0D5-4DCF-AE97-59C79EE59964_flat.root",
@@ -43,40 +35,12 @@
                     "nevts": 501266
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/17B4AF61-07CB-4ABA-AEF0-A99C17F2E7CD_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/1AFCEE9C-1BE5-41DD-8B9D-6AF9462E8968_flat.root",
                     "nevts": 559661
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/1C5BA5FF-9FFA-427D-A488-799DE9065B8F_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/1DD1CEEB-D37D-4260-8DA4-04E47C2B716C_flat.root",
                     "nevts": 436547
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/1EE5C30A-7533-4B3E-868F-0AD2E5F20498_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/1F52F1DC-FDA9-4A7E-BC55-BFD732047931_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/1F940762-845D-4EEE-9A4F-006371E0814D_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/21C95E09-C5B4-4441-B31C-94B80685B4CE_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/272144E2-DA4E-4BFA-B87E-6F8E258B9635_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/281911DD-46D2-4D85-8DBC-8ED16C8F5A95_flat.root",
@@ -87,92 +51,32 @@
                     "nevts": 431946
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/2ECB512B-0C71-4194-B40B-C03F19B05FD7_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/41DC8374-00C3-431A-BBB4-7CD06319E622_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/4315DF6C-ECD0-428C-8C95-1991B9BCD0FD_flat.root",
                     "nevts": 488000
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/470025D7-D8B3-477E-8A0C-B9B158ED8533_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/4849BA7C-0D64-4C64-868C-BA8D5D8CAD21_flat.root",
                     "nevts": 521621
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/49BF883E-CE91-4EA7-A0AB-3DF21B62C2E9_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/4B314AB4-380C-47A0-A62B-E82BC2BA58F5_flat.root",
                     "nevts": 459512
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/4E2683C9-6ED2-4987-817F-B27BEBDFC8F4_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/4EB3C17D-C3F1-47C9-A3E6-E699FF520BCC_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/504FF8FC-7DC7-4035-9913-FC10D7FD76C5_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/52339D99-1DF6-4445-B65D-1765A8B4D425_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/573262AD-9C84-453A-898E-CEFEEDFDC541_flat.root",
                     "nevts": 389506
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/578032EF-D2CB-477B-8D65-380DF2B0B2E8_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/5994FACC-E71F-4501-8C73-21764F2E5730_flat.root",
                     "nevts": 564600
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/5CC786EE-2846-4B07-9E81-C15C81A874BF_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/5DD24894-A5FE-48D4-B2EE-57C0E40ABD56_flat.root",
                     "nevts": 503676
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/63A26B55-BB93-4114-9BC4-B8B0DCE58C06_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/63DCA461-026D-4BC1-9ACE-853E3EDA4BC8_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/68E6D157-E511-46C9-BC68-385487650CC3_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/703FD021-379D-44D4-B4E1-D5A5DB839AF2_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/76ECD3B5-9006-428A-AC8E-A4E4FA807BD3_flat.root",
                     "nevts": 465992
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/797D4B94-48EA-434D-BEF4-DC5E4DD7104E_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/7BABE23F-41E1-4633-9F72-27239D1DD908_flat.root",
@@ -191,14 +95,6 @@
                     "nevts": 463384
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/81BE2768-25FB-4B40-A755-6FBB4D8CF37C_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/83352B4C-FF68-4E79-AAD6-DE0FB5935842_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/889B92EC-07C1-4BF6-8E45-A67F61FE5349_flat.root",
                     "nevts": 509158
                 },
@@ -211,20 +107,8 @@
                     "nevts": 552020
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/8F17740E-58EB-41F5-BF14-91F0813C3265_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/8FA2101C-601D-4D4F-8703-7D995B84CBB3_flat.root",
                     "nevts": 478707
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/929636EB-5F97-472D-89F2-C2EB12666A72_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/97E241F2-253A-4C89-85F5-D145C107FC25_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/980E97AA-1C75-4F04-9D0C-63E1490C8F5A_flat.root",
@@ -239,10 +123,6 @@
                     "nevts": 495165
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/B25A6684-845C-43F5-AC32-A8F08664F3EF_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/B33644DB-667C-4D6D-A37D-B97F570F071A_flat.root",
                     "nevts": 467036
                 },
@@ -251,24 +131,8 @@
                     "nevts": 493723
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/B85E270F-49D2-464E-9BF1-C5B71835FBDF_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/BA9C717D-82A2-4B5A-BA70-0D437FDB7C75_flat.root",
                     "nevts": 418288
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/BC3F31A5-1A7B-4FDD-A038-7E0A7E36BA0F_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/BDB8977B-026F-4EBD-8CB3-BCF0419EB98E_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/C09DDC9C-DB5E-4815-A536-DC5AE3E67496_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/C1D64D4F-BE89-4900-BA27-4B961F3D628E_flat.root",
@@ -279,20 +143,12 @@
                     "nevts": 507047
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/C62596E3-E5AC-4C75-A29B-A4E58BB9214A_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/C6288579-D145-4841-8558-D33D393FE4ED_flat.root",
                     "nevts": 437956
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/C83CDEA8-0648-427A-8C9A-929E9D705E04_flat.root",
                     "nevts": 481654
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/C881B9F2-153C-4182-8893-306DC3A61366_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/CC849BD5-64E4-4E0C-8382-65E19FE90EF3_flat.root",
@@ -307,28 +163,8 @@
                     "nevts": 410016
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/D7453485-B377-453A-B588-3DE87E5240D0_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/D9A07110-3040-4F45-B3D9-FBFE859E094E_flat.root",
                     "nevts": 530823
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/DCE216A6-720F-4D46-8C95-389FB201791B_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/DD075293-6B46-472C-A5B5-27C1EA669A4F_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/DD5A9A5B-38D5-439A-9022-D34791FA9BBA_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/DDBAC001-98B0-44ED-AC99-44119964E8A6_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/E4F1B731-0937-4114-8EF5-0190BB7E7AC2_flat.root",
@@ -343,32 +179,8 @@
                     "nevts": 435817
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/EC128CC1-89B5-420A-B763-0E777EBD1F22_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/EC668600-3D15-4127-9116-AB681DE848BD_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/ED3100F6-3F92-4982-8169-8112E4D95AFC_flat.root",
                     "nevts": 457231
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/ED8EC0C5-0F46-4530-83C3-FED3618DAB05_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/F3E235A8-EFA1-4204-B11C-82F512FA8151_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/F5BD5617-70C8-4060-8D63-F3811D3B8546_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/F80366A4-D2E1-482B-A3C1-482F36E007B0_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/F80F0BF0-AC5F-4050-90A0-C99FBFFB9C52_flat.root",
@@ -379,24 +191,12 @@
                     "nevts": 496577
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/0036EEB0-7009-4FF3-9E54-6F9888F23607_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/0736D381-A499-4EDD-8513-27E32DC0A636_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/0A6D49EC-50AB-47FF-9B02-112287C3D2B7_flat.root",
                     "nevts": 201931
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/0A794A79-0F86-4D69-B306-B698D4591F04_flat.root",
                     "nevts": 197978
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/0B666DEC-B05D-4465-B745-67D04DD9466C_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/0C928531-C5B4-4618-9B0F-4716ECFBF1B5_flat.root",
@@ -407,60 +207,20 @@
                     "nevts": 20649
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/0F2409AC-F381-4918-A215-B4A99A67DE08_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/137F598E-8644-4223-B4B8-31C53D218CFC_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/161A4CF3-18DC-4D3D-B982-DD05F6ED11ED_flat.root",
                     "nevts": 213837
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/18C5F2CD-77E9-4B80-B79A-AE4C38D7CF39_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/1BED4E85-BACE-4898-82F8-59AA2F195271_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/1CABB87F-49E2-4230-B93F-FC8DBAFF0425_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/1EE8FEBD-C126-4866-8A17-9537E414D657_flat.root",
                     "nevts": 176387
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/1FA9D1E1-FF79-4A67-A69D-42BB94F6B68D_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/230BD913-EA22-4DCE-9134-245F9C2E669F_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/23C8CC1D-FD4B-47EC-A110-2B9CE87FD18B_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/24A814F8-11BD-4748-87DF-4CB9E3C09250_flat.root",
                     "nevts": 226951
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/24BCF031-5BBA-4F61-8E7B-97DE425F8F00_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/25B8C3DF-9E1F-44B5-A6DD-7F3646BC95F1_flat.root",
                     "nevts": 211974
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/26820DC3-FDFF-4B80-9369-61E3472E9525_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/2A01F7ED-ACD0-4AF0-84C5-3751857B0D8F_flat.root",
@@ -471,10 +231,6 @@
                     "nevts": 228839
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/2BAE26DF-E8D8-442C-9264-728AE6204176_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/2C3F020E-FEE3-4035-B11D-98240E52014B_flat.root",
                     "nevts": 226816
                 },
@@ -483,24 +239,8 @@
                     "nevts": 201765
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/2D5CC1D6-EF32-4E4D-B7C9-057E84652BA1_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/334D7957-270E-4DFA-AA16-759647A9CC0E_flat.root",
                     "nevts": 200365
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/35A8A0DD-D70E-4CE3-BFDA-901760728E22_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/3A3A6BDA-FCE6-45FD-9A22-D2E7C41C88E0_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/3CBFDA9F-59C3-4894-9F1B-180B95DE3933_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/3E054BBD-5A97-4BB9-B3A8-215391A7D46B_flat.root",
@@ -511,14 +251,6 @@
                     "nevts": 195659
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/44FFB151-EAB2-4435-957F-00547314E608_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/4666E951-6C3E-4D68-BB1A-D8B92670C85D_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/478D2CF5-47B2-4031-9250-15235EB00359_flat.root",
                     "nevts": 228832
                 },
@@ -527,24 +259,12 @@
                     "nevts": 211944
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/4AAB1E1E-1F3E-4C90-8F30-772C051769B4_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/4D36114E-F596-4370-A8C3-A0D7C300085E_flat.root",
                     "nevts": 78413
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/4F602D6C-9A28-4988-91C4-693F4ED7A5E0_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/4F8A68CB-8B09-4DAA-B215-B4A1685A89AE_flat.root",
                     "nevts": 141999
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/50343FE4-D670-4E0E-946F-FEDBD2206759_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/511BF27A-5A70-4E08-A110-C050E7FAA906_flat.root",
@@ -555,60 +275,24 @@
                     "nevts": 209250
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/555B676C-257F-4DDF-A147-1A6E6927BFC0_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/5696C70D-5AC5-4B43-A639-173E26166A80_flat.root",
                     "nevts": 155535
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/56D989A1-A89C-41DD-B756-60B0375560F5_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/57122B3A-8CEF-4A16-BB98-74FEABCAD854_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/592E307C-364F-4ED7-8440-014B15F73FC0_flat.root",
                     "nevts": 191734
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/5994EE32-B9F2-4B73-92FA-6F35967790A7_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/5BD81FFE-FDF3-44B8-8486-9A5B960B3AD5_flat.root",
                     "nevts": 240234
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/5D719A95-7AE6-4ED8-BCFE-474E6E866031_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/5E2AC014-5AFE-43DD-9654-F563E97A087C_flat.root",
                     "nevts": 171768
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/5F22900A-D2A5-4717-B875-B4603B97BADE_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/5FB2FE74-88D9-4F8B-9595-5325B9E747E2_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/61BD6918-9AEE-47CA-AB6F-B80AFAFDBAFE_flat.root",
                     "nevts": 169009
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/628EF5DD-45FF-48F9-99DD-5799E182CC48_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/643F2D81-2A01-4568-9CDE-9B6ECB4F4543_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/6551AFCA-8017-47CB-B28C-FDE8569969DC_flat.root",
@@ -623,44 +307,16 @@
                     "nevts": 205870
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/6B338458-B3CF-44A6-AFC1-EE86F0FC2FA8_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/6B96BF1A-97D2-45A9-9F86-76534BD95832_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/6BF6E140-DC2A-421E-BC78-77076746E094_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/6DD0D641-207C-4F30-B0F9-2BFCEFF318FD_flat.root",
                     "nevts": 172912
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/6FDDE614-D761-420D-ACB6-3F63752D6EFA_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/7012A61D-012E-4619-BFD8-CA2341E729E4_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/72B94931-225D-47AA-865F-218733C2E0A0_flat.root",
                     "nevts": 196130
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/73505356-87DC-4ED1-8619-4948B603D772_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/74D65F89-0029-4827-A59F-6BD4A6A79B5B_flat.root",
                     "nevts": 201239
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/75231326-E06F-4866-AABF-7D910B545C4B_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/78E94491-C139-492F-8C0F-A42FC60E3282_flat.root",
@@ -671,32 +327,12 @@
                     "nevts": 238144
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/7C7EFBE8-1BE5-4C9D-A40C-29E19C1030D3_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/7CDDB16D-7477-48F8-B68F-4BEDADB71D84_flat.root",
                     "nevts": 204134
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/7FBC5550-A9A1-40FD-BFC7-AECA99ADD931_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/852A394B-2197-4269-B367-FDCE4DD089FD_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/87A90D74-09F6-4C66-A386-5BD734BDBC1D_flat.root",
                     "nevts": 253817
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/8B1BF0F1-D059-483A-9CB8-D90F0F98CE67_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/8CB38C0F-4E83-4EFB-B353-F57085039881_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/8F2BF4A9-FEB8-44AC-A61D-263EC9E967EC_flat.root",
@@ -711,42 +347,6 @@
                     "nevts": 201823
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/9291CB68-F126-469C-825F-BEF3302F9725_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/93E8BD1B-84A1-4146-A956-B9D044D5378F_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/94422FA2-DF9B-43B8-9BB4-E0C6423C3943_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/94928A36-4FE2-47D6-920B-497C31C36736_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/99C1B98A-BE77-4F50-97A7-4ACF5825A4D2_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/9B8FB14E-6A4C-4947-9AB4-CA72F5611057_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/9C96B526-92AF-463F-AAE4-8F8F9811115C_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/9DB8D57A-7168-4C1D-8FE0-74C0B67371B7_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/9ECCEA97-3596-4C4A-87FC-50C11A18097B_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/A2C4BC6E-7C4A-43EF-9F31-F993445F0043_flat.root",
                     "nevts": 204343
                 },
@@ -755,32 +355,12 @@
                     "nevts": 219984
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/A76A4D28-EE7D-43FB-84DE-A8CAC573B94B_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/A8BB2F99-B48B-4B5A-830A-F3A10D8CE708_flat.root",
                     "nevts": 219535
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/A8EC4B40-B03F-48AE-9030-5EA89A7F981E_flat.root",
                     "nevts": 231485
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/AA4E87A5-0FEA-4E87-BD19-35F552CEA45F_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/ABE7AA0E-4C37-4B5D-9738-04CB2072279F_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/AC43025F-E8B0-4008-9C29-53862676FC85_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/AD646C19-43D7-49A1-B981-09C49E9B5BD4_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/AEBED55A-667F-4440-936A-26DA6AF9BEA6_flat.root",
@@ -807,10 +387,6 @@
                     "nevts": 213230
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/C82BD57E-13AF-43C4-94FB-E5E6773A76A3_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/CA890FAA-180F-4679-8030-3460A603FB03_flat.root",
                     "nevts": 171009
                 },
@@ -821,10 +397,6 @@
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/CBD5AA59-1842-4903-A625-9104B30211B4_flat.root",
                     "nevts": 219171
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/CC15CA2A-9EEF-4D76-8972-D01B45BD0EF9_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/CCBA7B03-33E2-437B-9A17-D47E35CD9E40_flat.root",
@@ -867,10 +439,6 @@
                     "nevts": 179478
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/DA68502C-8A79-4B08-BF29-41BB8FC4D9C3_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/DE102D61-B015-471A-80CD-18A5E40E9D78_flat.root",
                     "nevts": 237637
                 },
@@ -891,18 +459,6 @@
                     "nevts": 234252
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/E2528DCA-FF36-480E-ACB6-254A47C1F751_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/E63DA7E7-E241-4682-90CD-7423C9C0C927_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/E6441446-7B3D-4A65-93C1-C711C60FCD37_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/E76864BD-A7D4-45AD-9D27-1A1F09791D58_flat.root",
                     "nevts": 227546
                 },
@@ -911,20 +467,8 @@
                     "nevts": 176806
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/E9E2FCE3-0B78-4379-9EF5-0501F02E062C_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/F010D444-F063-44A3-A129-ACA7F7C7FFF4_flat.root",
                     "nevts": 187647
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/F04135D5-9E4B-4316-9F07-D6879B2AB675_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/F12C0CFE-32C1-43FF-AF7C-A946C7F93726_flat.root",
-                    "nevts": 15090
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/F14954BA-7198-4617-AE42-9C1364873740_flat.root",
@@ -939,23 +483,11 @@
                     "nevts": 217467
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/F8C6D82B-1F0B-4FFD-BAA6-4AEEE3BE3225_flat.root",
-                    "nevts": 15090
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/FB959AEB-CED0-487B-936E-3DBF28189C0B_flat.root",
-                    "nevts": 15090
-                },
-                {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/FE4CD54E-A8A0-41EC-89ED-DA6076C4BFAD_flat.root",
                     "nevts": 206750
-                },
-                {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/FF2ED9F5-2FED-4F5E-B487-E443E0BA983C_flat.root",
-                    "nevts": 15090
                 }
             ],
-            "nevts_total": 38384549
+            "nevts_total": 36619019
         }
     },
     "ttbar": {
