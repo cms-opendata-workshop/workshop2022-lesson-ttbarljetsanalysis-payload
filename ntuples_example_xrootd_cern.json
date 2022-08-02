@@ -3,47 +3,47 @@
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_TT_TuneCUETP8M1_13TeV-powheg-pythia8_flat/6D5A8366-FEA3-4C76-BD4E-22B56D367281_flat.root",
-                    "nevts": 390187
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_TT_TuneCUETP8M1_13TeV-powheg-pythia8_flat/3F192B5C-3DDF-4FF4-A712-BAC2811F699D_flat.root",
+                    "nevts": 306755
                 }
             ],
-            "nevts_total": 390187
+            "nevts_total": 306755
         },
         "scaledown": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_flat/45AEE56C-A4FD-4B72-86AE-AEBBCD4965D9_flat.root",
-                    "nevts": 405378
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_flat/DA1A9EE0-497A-4BAC-9883-925E9BAABA40_flat.root",
+                    "nevts": 344799
                 }
             ],
-            "nevts_total": 405378
+            "nevts_total": 344799
         },
         "scaleup": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_TT_TuneCUETP8M1_13TeV-powheg-scaleup-pythia8_flat/05D4F942-E968-4B9F-B2B0-86FFAAFF4322_flat.root",
-                    "nevts": 408710
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_TT_TuneCUETP8M1_13TeV-powheg-scaleup-pythia8_flat/4B61338F-5609-4965-9988-1A6116466271_flat.root",
+                    "nevts": 316729
                 }
             ],
-            "nevts_total": 408710
+            "nevts_total": 316729
         },
         "ME_var": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_TTJets_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_flat/EBA921C2-9041-40A8-953A-A9911878DBA8_flat.root",
-                    "nevts": 418018
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_TTJets_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_flat/FC5230C5-156C-4E24-8C46-7FCA8860600D_flat.root",
+                    "nevts": 325745
                 }
             ],
-            "nevts_total": 418018
+            "nevts_total": 325745
         },
         "PS_var": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_TT_TuneEE5C_13TeV-powheg-herwigpp_flat/54012513-ADB9-45CF-80B8-233C5A3DD475_flat.root",
-                    "nevts": 406586
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_TT_TuneEE5C_13TeV-powheg-herwigpp_flat/E4FE43D3-035C-4FB7-87D2-1A3ADEF0232A_flat.root",
+                    "nevts": 357866
                 }
             ],
-            "nevts_total": 406586
+            "nevts_total": 357866
         }
     },
     "single_atop_t_chan": {
@@ -61,11 +61,11 @@
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_ST_t-channel_4f_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_flat/241124EF-CCE6-4977-9465-A0C4B6FFAA9B_flat.root",
-                    "nevts": 568395
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_ST_t-channel_4f_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_flat/649B26DE-302B-482F-ACDF-724E9355143A_flat.root",
+                    "nevts": 532421
                 }
             ],
-            "nevts_total": 568395
+            "nevts_total": 532421
         }
     },
     "single_top_tW": {
@@ -73,11 +73,11 @@
             "files": [
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_ST_tW_top_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_flat/D4B6F1FF-FC96-4D8C-BCBE-51C2C038DA53_flat.root",
-                    "nevts": 225039 
+                    "nevts": 225039
                 },
                 {
                     "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1_flat/5CF71E92-2C15-4476-9CFB-FDA53F431351_flat.root",
-                    "nevts": 225319 
+                    "nevts": 225319
                 }
             ],
             "nevts_total": 450358
@@ -88,26 +88,26 @@
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_flat/215CBFA9-3631-4F3F-A177-C862BEAB2D75_flat.root",
-                    "nevts": 388674
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/RunIIFall15MiniAODv2_WJetsToLNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8_flat/64D115C9-ED44-43D1-9A89-6D6553FE8E22_flat.root",
+                    "nevts": 306151
                 }
             ],
-            "nevts_total": 388674
+            "nevts_total": 306151
         }
     },
     "data": {
         "nominal": {
             "files": [
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/FF2ED9F5-2FED-4F5E-B487-E443E0BA983C_flat.root",
-                    "nevts": 15090
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleElectron_flat/4D36114E-F596-4370-A8C3-A0D7C300085E_flat.root",
+                    "nevts": 78413
                 },
                 {
-                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/F5BD5617-70C8-4060-8D63-F3811D3B8546_flat.root",
-                    "nevts": 15090
+                    "path": "root://eospublic.cern.ch//eos/opendata/cms/upload/POET/23-Jul-22/Run2015D_SingleMuon_flat/980E97AA-1C75-4F04-9D0C-63E1490C8F5A_flat.root",
+                    "nevts": 376935
                 }
             ],
-            "nevts_total": 30180
+            "nevts_total": 455348
 
         }
     }

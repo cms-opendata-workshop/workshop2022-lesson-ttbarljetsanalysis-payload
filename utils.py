@@ -41,6 +41,18 @@ def construct_fileset(n_files_max_per_sample, use_xcache=False):
         "data": None
     }
 
+    # get the avg scaling factor for datasets because we haven't
+    # recovered the original number of events that went into each file
+    # the skimming jobs were not 1 to 1
+    with open("ntuples_factors.json") as nf:
+        nfactors_info = json.load(nf)
+
+    nfactors_dic = {}
+    for process in nfactors_info.keys():
+        nfactors_dic[process] = {}
+        for variation in nfactors_info[process].keys():
+            nfactors_dic[process][variation]= nfactors_info[process][variation]["factor"]
+
     # list of files
     with open("ntuples.json") as f:
         file_info = json.load(f)
@@ -56,7 +68,8 @@ def construct_fileset(n_files_max_per_sample, use_xcache=False):
                 file_list = file_list[:n_files_max_per_sample]  # use partial set of samples
 
             file_paths = [f["path"] for f in file_list]
-            nevts_total = sum([f["nevts"] for f in file_list])
+            #nevts_total = sum([f["nevts"] for f in file_list])
+            nevts_total = sum([f["nevts"] for f in file_list])/nfactors_dic[process][variation]    
             metadata = {"process": process, "variation": variation, "nevts": nevts_total, "xsec": xsec_info[process]}
             fileset.update({f"{process}__{variation}": {"files": file_paths, "metadata": metadata}})
 

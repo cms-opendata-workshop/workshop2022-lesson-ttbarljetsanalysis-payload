@@ -37,11 +37,6 @@ from agc_schema import AGCSchema
 # -1  means running over all datasets
 N_FILES_MAX_PER_SAMPLE = -1
 
-# number of total data events used (electron and muon)
-# for testing with limited datasets and scale down luminosity
-# -1 will not scale lumi (run it with -1 if using the whole dataset)
-EVENTS_DATA = -1
-
 # pipeline to use:
 # - "coffea" for pure coffea setup
 # Refer to https://github.com/iris-hep/analysis-grand-challenge/blob/main/analyses/cms-open-data-ttbar/coffea.ipynb
@@ -143,9 +138,7 @@ class TtbarAnalysis(processor_base):
         # This truelumi number was obtained with
         # brilcalc lumi -c web -i Cert_13TeV_16Dec2015ReReco_Collisions15_25ns_JSON_v2.txt -u /pb --normtag normtag_PHYSICS_2015.json  --begin 256630 --end 260627 > lumi2015D.txt
         # lumi in units of /pb
-        #total number of events in singleelectron + singlemuon is 226175693
-        truelumi = 2256.38
-        lumi = truelumi*(EVENTS_DATA/226175693) if (EVENTS_DATA != -1) else truelumi
+        lumi = 2256.38
         if process != "data":
             xsec_weight = x_sec * lumi / nevts_total
         else:
@@ -297,7 +290,7 @@ print(f"\nexecution took {time.time() - t0:.2f} seconds")
 #utils.save_histograms(all_histograms, fileset, "histograms.root")
 save_histograms(all_histograms, fileset, "histograms.root")
 
-#quit()
+quit()
 
 #################################
 #The below are just examples to show, mainly, when working interactively.
