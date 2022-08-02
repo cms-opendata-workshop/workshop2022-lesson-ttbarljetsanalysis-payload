@@ -262,12 +262,12 @@ class TtbarAnalysis(processor_base):
 
 
 
-# "Fileset" construction and metadata
+# "Fileset" construction and metadata via utils.py file
 # Here, we gather all the required information about the files we want to process: paths to the files and asociated metadata
 # making use of the utils.py code in this repository
 fileset = construct_fileset(N_FILES_MAX_PER_SAMPLE, use_xcache=False)
 print(f"processes in fileset: {list(fileset.keys())}")
-print(f"\nexample of information in fileset:\n{{\n  'files': [{fileset['ttbar__nominal']['files'][0]}, ...],")
+print(f"\nexample of information in fileset:\n {{\n  'files': [{fileset['ttbar__nominal']['files'][0]}, ...],")
 print(f"  'metadata': {fileset['ttbar__nominal']['metadata']}\n}}")
 t0 = time.time()
 
@@ -280,7 +280,6 @@ if PIPELINE == "coffea":
     from coffea.nanoevents.schemas.schema import auto_schema
     schema = AGCSchema if PIPELINE == "coffea" else auto_schema
     run = processor.Runner(executor=executor, schema=schema, savemetrics=True, metadata_cache={})
-    #print(fileset)
     all_histograms, metrics = run(fileset, "events", processor_instance=TtbarAnalysis())
     all_histograms = all_histograms["hist"]
 
@@ -296,7 +295,6 @@ quit()
 #The below are just examples to show, mainly, when working interactively.
 #They can be commented out
 #################################
-#Inspecting the produced histograms (if run interactively or in a notebook)
 #Let's have a look at the data we obtained. We built histograms in two phase space regions, for multiple physics processes and systematic variations.
 #utils.set_style()
 set_style()
