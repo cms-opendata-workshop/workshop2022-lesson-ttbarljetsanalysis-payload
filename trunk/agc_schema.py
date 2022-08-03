@@ -47,7 +47,7 @@ class AGCSchema(BaseSchema):
             #if ( (name == 'jet') or (name == 'fatjet')):
             #    content['energy'] = branch_forms[name+'_corre']
             #else:
-                content['energy'] = branch_forms[name+'_e']
+            content['energy'] = branch_forms[name+'_e']
             # Check for LorentzVector
             output[name] = zip_forms(content, name, 'PtEtaPhiELorentzVector', offsets=offsets)
 
