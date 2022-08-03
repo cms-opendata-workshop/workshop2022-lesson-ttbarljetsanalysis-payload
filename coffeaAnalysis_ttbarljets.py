@@ -135,7 +135,7 @@ class TtbarAnalysis(processor_base):
         # normalization for MC
         x_sec = events.metadata["xsec"]
         nevts_total = events.metadata["nevts"]
-        # This truelumi number was obtained with
+        # This lumi number was obtained with
         # brilcalc lumi -c web -i Cert_13TeV_16Dec2015ReReco_Collisions15_25ns_JSON_v2.txt -u /pb --normtag normtag_PHYSICS_2015.json  --begin 256630 --end 260627 > lumi2015D.txt
         # lumi in units of /pb
         lumi = 2256.38
@@ -289,10 +289,11 @@ print(f"\nexecution took {time.time() - t0:.2f} seconds")
 #utils.save_histograms(all_histograms, fileset, "histograms.root")
 save_histograms(all_histograms, fileset, "histograms.root")
 
-quit()
+exit(0)
 
 #################################
 #The below are just examples to show, mainly, when working interactively.
+#The data histogram will be stacked with the MC, so one needs to slice it properly
 #They can be commented out
 #################################
 #Let's have a look at the data we obtained. We built histograms in two phase space regions, for multiple physics processes and systematic variations.
