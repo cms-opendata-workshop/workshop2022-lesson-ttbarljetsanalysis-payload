@@ -39,12 +39,15 @@ class AGCSchema(BaseSchema):
         for name in names:
             #drop branches that are not needed
             offsets = transforms.counts2offsets_form(branch_forms['number' + name])
-            #content = {k[len(name)+1:]: branch_forms[k] for k in branch_forms if (k.startswith(name + "_") & (k[len(name)+1:] != 'e'))}
-            content = {k[len(name)+1:]: branch_forms[k] for k in branch_forms if (k.startswith(name + "_") & (k[len(name)+1:] != 'e') & (k[len(name)+1:] != 'corre'))}
+            content = {k[len(name)+1:]: branch_forms[k] for k in branch_forms if (k.startswith(name + "_") & (k[len(name)+1:] != 'e'))}
+            #content = {k[len(name)+1:]: branch_forms[k] for k in branch_forms if (k.startswith(name + "_") & (k[len(name)+1:] != 'e') & (k[len(name)+1:] != 'corre'))}
             # Add energy separately so its treated correctly by the p4 vector.
             # It expects 'energy' and not 'e'
             # https://coffeateam.github.io/coffea/api/coffea.nanoevents.methods.vector.PtEtaPhiELorentzVector.html
-            content['energy'] = branch_forms[name+'_e']
+            #if ( (name == 'jet') or (name == 'fatjet')):
+            #    content['energy'] = branch_forms[name+'_corre']
+            #else:
+            #    content['energy'] = branch_forms[name+'_e']
             # Check for LorentzVector
             output[name] = zip_forms(content, name, 'PtEtaPhiELorentzVector', offsets=offsets)
 
